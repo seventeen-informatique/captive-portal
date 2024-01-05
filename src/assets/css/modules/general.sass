@@ -5,6 +5,10 @@ body
   background-color: $background
 
 .btn
+  display: inline-flex
+  flex-direction: row
+  align-items: center
+  gap: 8px
   padding: 12px 32px
   font-family: $font-default
   font-weight: 600
@@ -14,3 +18,20 @@ body
   color: $color-black
   cursor: pointer
   transition: all .25s ease
+  text-decoration: none
+
+.btn-primary
+  background-color: white
+  border-color: white
+  color: $color-black
+
+  svg path
+    stroke: $color-black
+
+.btn-secondary
+  background-color: transparent
+  border-color: white
+  color: white
+
+  svg path
+    stroke: white

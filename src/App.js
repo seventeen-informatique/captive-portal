@@ -1,4 +1,6 @@
 import logo from './assets/medias/logo/logo.svg';
+import {ReactComponent as IconGoogle} from './assets/medias/icones/brands/google.svg';
+import {ReactComponent as IconCode} from './assets/medias/icones/programing/code.svg';
 import './assets/css/main.css';
 import React from "react";
 
@@ -20,15 +22,18 @@ const Header = ({title, text}) => {
             <div>
                 <h1>{title}</h1>
                 <p>{text}</p>
-                <Button type="btn btn-primary" content="Voir nos offres" />
+                <div className="btn-container">
+                    <Button type="btn btn-primary" content="Voir nos offres" icon={<IconCode />} link="https://seventeeninfo.fr" />
+                    <Button type="btn btn-secondary" content="Naviguer sur internet" icon={<IconGoogle />} link="https://google.fr"/>
+                </div>
             </div>
         </header>
     );
 }
 
-const Button = ({type, content}) => {
+const Button = ({type, icon, content, link}) => {
     return (
-        <button className={type}>{content}</button>
+        <a href={link} className={type} target="_blank" rel="noreferrer">{icon} {content}</a>
     );
 }
 
