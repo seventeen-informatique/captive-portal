@@ -4,10 +4,65 @@
   font-display: swap;
   font-weight: normal;
 }
+@font-face {
+  font-family: "Degular";
+  src: url("../fonts/Degular/Degular-Bold.otf");
+  font-display: swap;
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Degular";
+  src: url("../fonts/Degular/Degular-Thin.otf");
+  font-display: swap;
+  font-weight: 100;
+}
+@font-face {
+  font-family: "Degular";
+  src: url("../fonts/Degular/Degular-Light.otf");
+  font-display: swap;
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Degular";
+  src: url("../fonts/Degular/Degular-Medium.otf");
+  font-display: swap;
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Degular";
+  src: url("../fonts/Degular/Degular-Semibold.otf");
+  font-display: swap;
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Degular";
+  src: url("../fonts/Degular/Degular-Bold.otf");
+  font-display: swap;
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Degular";
+  src: url("../fonts/Degular/Degular-Black.otf");
+  font-display: swap;
+  font-weight: 900;
+}
 body {
   margin: 0;
   padding: 0;
   font-family: "Degular", Arial, sans-serif;
+  background-color: #f5f1ed;
+}
+
+.btn {
+  padding: 12px 32px;
+  font-family: "Degular", Arial, sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  border: 1px solid white;
+  background-color: white;
+  color: #0A0A1E;
+  cursor: pointer;
+  transition: all 0.25s ease;
 }
 
 nav {
@@ -21,9 +76,53 @@ nav {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  padding: 0 150px;
+  background-color: white;
 }
 nav > div:first-child img {
-  height: 4rem;
+  height: 2.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    padding: 0 24px;
+    justify-content: center;
+  }
+}
+header {
+  height: calc(100vh - 5rem - 300px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../medias/background.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  padding: 32px 150px;
+}
+header > div {
+  border: 1px solid white;
+  padding: 12px 32px;
+}
+header > div h1, header > div p {
+  margin: 0;
+}
+header > div h1 {
+  font-size: 40px;
+  line-height: 36px;
+  margin-bottom: 16px;
+}
+header > div p {
+  margin-bottom: 24px;
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    height: calc(100vh - 48px);
+    padding: 24px 24px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
