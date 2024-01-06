@@ -176,6 +176,10 @@ footer {
   font-weight: 600;
   font-size: 16px;
   text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 16px;
 }
 footer a {
   color: #0A0A1E;
@@ -185,6 +189,42 @@ footer a {
   footer {
     padding: 24px 24px;
   }
+}
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 16px;
+  grid-row-gap: 16px;
+  margin-top: 32px;
+}
+.services-container > div {
+  border: 1px solid #0A0A1E;
+  color: #0A0A1E;
+  padding: 12px 24px;
+}
+.services-container > div:first-child {
+  grid-area: 1/1/2/2;
+}
+.services-container > div:nth-child(2) {
+  grid-area: 1/2/2/3;
+}
+.services-container > div:nth-child(3) {
+  grid-area: 1/3/3/4;
+}
+.services-container > div:nth-child(4) {
+  grid-area: 2/1/3/3;
+}
+
+.meteo-city {
+  font-weight: 500;
+  font-size: 18px;
+  margin: 0;
+}
+.meteo-temperature {
+  font-size: 48px;
+  font-weight: 300;
+  margin: 0;
 }
 
 /*# sourceMappingURL=main.css.map */
