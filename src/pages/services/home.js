@@ -4,6 +4,7 @@ const WeatherComponent = () => {
     const apiKey = process.env.REACT_APP_OPENWEATHER_APIKEY;
     const city = "Lyon";
     const [temperature, setTemperature] = useState('0');
+    const [icon, setIcon] = useState('');
 
     useEffect(() => {
         const getWeather = async () => {
@@ -15,6 +16,8 @@ const WeatherComponent = () => {
 
                 const data = await response.json();
                 setTemperature(data.main.temp);
+                setIcon(`https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`);
+                console.log(data)
             } catch (error){
                 console.log('Une erreur est survenue lors de la tentative de requête');
             }
@@ -22,7 +25,15 @@ const WeatherComponent = () => {
         getWeather();
     }, [apiKey, city]);
     return (
-        <p className="meteo-temperature">{temperature} °C</p>
+        <div className="meteo-compo">
+            <div>
+                <img src={icon} alt="Icone meteo"/>
+            </div>
+            <div>
+                <p className="meteo-city">{city}</p>
+                <p className="meteo-temperature">{temperature}°C</p>
+            </div>
+        </div>
     );
 }
 
@@ -42,7 +53,6 @@ export default function ServicesHome() {
                     </div>
                     <div className="meteo">
                         <h2>Météo</h2>
-                        <p className="meteo-city">Lyon, France</p>
                         <WeatherComponent/>
                     </div>
                     <div>
