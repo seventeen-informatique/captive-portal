@@ -47,6 +47,7 @@ export default function ServicesHome() {
                 <div className="services-container">
                     <div>
                         <h2>Wifi-Connect</h2>
+                        <p>Profitez d'une connexion Wifi haut debit gratuite</p>
                     </div>
                     <div>
                         <h2>Service 2</h2>
